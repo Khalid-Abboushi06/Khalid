@@ -2,3 +2,727 @@ File Backup
 
 
 This will contain the file backup assignment
+
+
+**HARDWARE PROJECT HTML - 2022-09-27** 
+
+***{BEGINNING - INDEX.HTML}***
+
+<!-- .Student Name: Khalid Abboushi | Student Number: 769723 | Teacher: Mr. Cho Y | Subject: Introduction to Computer Science Grade 11 | Assignment: Hardware Project | Date: 2022-09-26
+-->
+<!DOCTYPE html>
+
+<html>
+
+<body style="background-color:#CFF9C8;">
+
+<head>
+
+</br>
+</br>
+</br>
+
+<div class="shape shape2">
+
+<h2><center>Hardware Project</h2>
+
+<h4><center>Khalid Abboushi</center></h4>
+
+</br>
+</br>
+</br>
+
+<h3><center>Welcome to my Hardware Project. Here you will find a step-by-step list (20-30 steps) about how a hard drive communicates and functions alongside the CPU, RAM, and Network Card.</h3>
+
+<br/>
+<br/>
+<br/>
+
+<a href="i.html"><button type="button">Process</button></a>
+
+<!--   [https://Functions-of-hardware.k769723.repl.co](https://functions-of-hardware.k769723.repl.co/) -->
+<br/>          <!-- To space out-->
+
+<a href="i1.html"><button type="button">Definitions</button></a>
+
+<br/>          <!-- To space out-->
+
+<a href="i2.html"><button type="button">Citation</button></a>
+
+<link href="style.css" rel="stylesheet" type="text/css"/>.
+
+<br/>          <!-- To space out-->
+<br/>          <!-- To space out-->
+<br/>          <!-- To space out-->
+
+<style>
+#myImg {
+border-radius: 5px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+.modal {
+display: none;
+position: fixed;
+z-index: 1;
+padding-top: 100px;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgb(0,0,0);
+background-color: rgba(0,0,0,0.9);
+}
+.modal-content {
+margin: auto;
+display: block;
+width: 80%;
+max-width: 700px;
+}
+
+#caption {
+margin: auto;
+display: block;
+width: 80%;
+max-width: 700px;
+text-align: center;
+color: #ccc;
+padding: 10px 0;
+height: 150px;
+}
+
+.modal-content, #caption {
+animation-name: zoom;
+animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+from {transform: scale(0.1)}
+to {transform: scale(1)}
+}
+
+.close {
+position: absolute;
+top: 15px;
+right: 35px;
+color: #f1f1f1;
+font-size: 40px;
+font-weight: bold;
+transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+color: #bbb;
+text-decoration: none;
+cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+.modal-content {
+width: 100%;
+}
+}
+</style>
+
+<img id="myImg" src="[https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aGFyZCUyMGRyaXZlfGVufDB8fDB8fA%3D%3D&w=1000&q=80](https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aGFyZCUyMGRyaXZlfGVufDB8fDB8fA%3D%3D&w=1000&q=80)" alt="This is the storage of the computer, where all your digital data is stored. The hard drive stores all of your files, from photos, to applications. Hard drives can be both external and internal." width="300" height="200">
+
+<div id="myModal" class="modal">
+<span class="close">×</span>
+<img class="modal-content" id="img01">
+<div id="caption"></div>
+</div>
+
+<script>
+
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+modal.style.display = "block";
+modalImg.src = this.src;
+captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+modal.style.display = "none";
+}
+
+</script>
+
+</div>
+
+</br>          <!-- To space out-->
+</br>          <!-- To space out-->
+</br>          <!-- To space out-->
+
+</head>
+
+</body>
+
+</html>
+
+***{END}***
+
+***{BEGINNING - I.HTML}***
+
+<!DOCTYPE html>
+
+<html>
+
+<body style="background-color:#CFF9C8;">  <!-- Background Color-->
+
+<head>
+
+</br>          <!-- To space out-->
+</br>          <!-- To space out-->
+</br>          <!-- To space out-->
+
+<div class="shape shape2"> <!-- Rounded square shape-->
+
+<h2><center>Process</h2> <!-- Header-->
+
+<h4><center>Khalid Abboushi</center></h4>
+
+</br>          <!-- To space out-->
+</br>          <!-- To space out-->
+</br>          <!-- To space out-->
+
+<h3><center>The user wants to upload a picture of the item they’re selling. How does this work, starting from their hard drive and then being sent to the application’s server?</h3>
+
+<br/>          <!-- To space out-->
+
+<ol type='1'>          <!-- Ordered list numbered-->
+
+<li>Picture is taken using camera</li>
+
+<li>The data of the image is sent to the RAM</li>
+
+<li>The RAM sends the data of the image to the CPU</li>
+
+<li>The CPU breaks the image down into tiny elements called pixels </li>
+
+<li>The pixels are converted into a sequence of letters for example; W-White)</li>
+
+<li>The CPU converts the sequence of letters into unicode (EX. letter W = 57)</li>
+
+<li>After this the CPU turns the unicodes to binary codes (W=57=00111001)</li>
+
+<li>All this data is then moved from the CPU back to the RAM</li>
+
+<li>This data is now moved to the hard drive where it will be stored permanently</li>
+
+<li>The user connects to the wifi network, this is done by the network card as it converts data to electrical signals. This signals allow computers to exchange data (Internet).</li>
+
+<li>The user open the website or program which will allow him to share his item online. This will be done by the network card.</li>
+<li>The CPU finds the image's data in the cache and reads it</li>
+
+<li>The user selects the photo</li>
+
+<li>The user uploads the photo which uses the CPU and network card</li>
+
+<li>The image is uploaded as the hard drive, cpu, and network card send the data to other computers which are recieving the data.</li>
+
+<li>The image's data is sent through electrical signals to other computers</li>
+
+<li>The image data is sent by the FTP (File transfer protocol), which is used to transfer data from one computer to another.</li>
+
+<li>The data is recieved by the applications server and is uploaded</li>
+
+<li>The photo is uploaded to the application and can be seen by other users</li>
+
+<li>Other users can contact and negotiate to purchase the item via the application or other social media applications. This is done through the internet.</li>
+
+</ol>          <!-- End of ordered list-->
+
+<h5><center>NOTE: The reason in which images have to be converted through this process is due to the fact that computers read and write data in the form of 1’s and 0’s, in other words, binary codes.</center></h5>          <!-- Header-->
+
+<br/>          <!-- To space out-->
+<br/>          <!-- To space out-->
+<br/>          <!-- To space out-->
+
+<a href="index.html"><button type="button">Back</button></a>           <!-- Back button-->
+
+<link href="style.css" rel="stylesheet" type="text/css"/>.
+
+<br/>          <!-- To space out-->
+<br/>          <!-- To space out-->
+<br/>          <!-- To space out-->
+
+</head>
+
+</body>
+
+</html>
+
+**{END}**
+
+**{BEGINNING - I1.HTML}**
+
+<!DOCTYPE html>
+
+<html>
+
+<body style="background-color:#CFF9C8;">  <!-- Background Color-->
+
+<head>
+
+</br>          <!-- To space out-->
+</br>          <!-- To space out-->
+</br>          <!-- To space out-->
+
+<div class="shape shape2"> <!-- Rounded square-->
+
+<h2><center>Definitions</h2> <!-- Header-->
+
+<h4><center>Khalid Abboushi</center></h4>
+
+</br>          <!-- To space out-->
+</br>          <!-- To space out-->
+</br>          <!-- To space out-->
+
+<h3><center>Definitions of terms</h3>
+
+<ul>  <!--Unordered list-->
+
+<li><center>Hard Drive : A hard drive is a non-volatile data storage device which stores data and information in binary. This form of storage is permanent.</center></li>
+
+<br>          <!-- To space out-->
+
+<li><center>Computer Processing Unit : A component in a computer which controls the interpretation and execution of instructions.</center></li>
+
+<br>          <!-- To space out-->
+
+<li><center>Random Acess Memory : Also known as RAM, is the primary storage device in a computer where data in use is kept for the CPU can easily access the data very quickly. </center></li>
+
+<br>          <!-- To space out-->
+
+<li><center>Network Card : The card in a computer which is responsible for the connection to the internet.</center></li>
+
+</ul>
+
+<br/>          <!-- To space out-->
+<br/>          <!-- To space out-->
+<br/>          <!-- To space out-->
+
+<a href="index.html"><button type="button">Back</button></a>
+
+<link href="style.css" rel="stylesheet" type="text/css"/>.
+
+<br/>          <!-- To space out-->
+<br/>          <!-- To space out-->
+<br/>          <!-- To space out-->
+
+</head>
+
+</body>
+
+</html>
+
+**{END}**
+
+**{BEGINNING - I2.HTML}**
+
+<!DOCTYPE html>
+
+<html>
+
+<body style="background-color:#CFF9C8;">  <!-- Background Color-->
+
+<head>
+
+</br>          <!-- To space out-->
+</br>          <!-- To space out-->
+</br>          <!-- To space out-->
+
+<div class="shape shape2"> <!-- Rounded square shape-->
+
+<h2><center>Citations</h2> <!-- Header-->
+
+<h4><center>Khalid Abboushi</center></h4> <!-- Header-->
+
+</br>          <!-- To space out-->
+</br>          <!-- To space out-->
+</br>          <!-- To space out-->
+
+<center>
+
+<a href="[https://unsplash.com/s/photos/hard-drive](https://unsplash.com/s/photos/hard-drive)
+">[https://unsplash.com/s/photos/hard-drive](https://unsplash.com/s/photos/hard-drive)
+</a>                                                         <!-- link-->
+
+<br>          <!-- To space out-->
+<br>          <!-- To space out-->
+
+<a href="[https://www.wallpaperflare.com/search?wallpaper=processor](https://www.wallpaperflare.com/search?wallpaper=processor)
+">[https://www.wallpaperflare.com/search?wallpaper=processor](https://www.wallpaperflare.com/search?wallpaper=processor) <!-- link-->
+</a>
+
+<br>          <!-- To space out-->
+<br>          <!-- To space out-->
+
+<a href="[https://www.wallpaperflare.com/green-and-black-ram-card-closeup-photo-of-a-dimm-stick-hardware-wallpaper-bli](https://www.wallpaperflare.com/green-and-black-ram-card-closeup-photo-of-a-dimm-stick-hardware-wallpaper-bli)
+">[https://www.wallpaperflare.com/green-and-black-ram-card-closeup-photo-of-a-dimm-stick-hardware-wallpaper-bli](https://www.wallpaperflare.com/green-and-black-ram-card-closeup-photo-of-a-dimm-stick-hardware-wallpaper-bli)
+</a> <!-- link-->
+
+<br>          <!-- To space out-->
+<br>          <!-- To space out-->
+
+<a href="[https://www.dreamstime.com/computer-network-card-black-background-closeup-computer-network-card-image137821548](https://www.dreamstime.com/computer-network-card-black-background-closeup-computer-network-card-image137821548)
+">[https://www.dreamstime.com/computer-network-card-black-background-closeup-computer-network-card-image137821548](https://www.dreamstime.com/computer-network-card-black-background-closeup-computer-network-card-image137821548)
+</a> <!-- link-->
+
+<br>          <!-- To space out-->
+<br>          <!-- To space out-->
+
+<a href="[https://www.explainthatstuff.com/harddrive.html](https://www.explainthatstuff.com/harddrive.html)
+">[https://www.explainthatstuff.com/harddrive.html](https://www.explainthatstuff.com/harddrive.html)
+</a> <!-- link-->
+
+<br>          <!-- To space out-->
+<br>          <!-- To space out-->
+
+<a href="[https://www.analyticssteps.com/blogs/network-interface-card-nic-overview](https://www.analyticssteps.com/blogs/network-interface-card-nic-overview)
+">[https://www.analyticssteps.com/blogs/network-interface-card-nic-overview](https://www.analyticssteps.com/blogs/network-interface-card-nic-overview)
+</a> <!-- link-->
+
+<br>          <!-- To space out-->
+<br>          <!-- To space out-->
+
+<a href="[https://www.phoca.cz/documents/38-tools/170-how-to-upload-files-to-server-via-ftp](https://www.phoca.cz/documents/38-tools/170-how-to-upload-files-to-server-via-ftp)
+">[https://www.phoca.cz/documents/38-tools/170-how-to-upload-files-to-server-via-ftp](https://www.phoca.cz/documents/38-tools/170-how-to-upload-files-to-server-via-ftp)
+</a> <!-- link-->
+
+</center>
+
+</br>          <!-- To space out-->
+</br>          <!-- To space out-->
+</br>          <!-- To space out-->
+
+<a href="index.html"><button type="button">Back</button></a> <!-- Button "back"-->
+
+<link href="style.css" rel="stylesheet" type="text/css"/>.
+
+<br/>          <!-- To space out-->
+<br/>          <!-- To space out-->
+<br/>          <!-- To space out-->
+
+</head>
+
+</body>
+
+</html>
+
+{END}
+
+{BEGINNING - STYLE.CSS}
+
+body{
+max-width: 500px;                     /*Width of the content box*/
+margin: auto;                         /*Margin of the content box*/
+}
+h3{
+margin-left: auto;                     /*In order to centralize text*/
+margin-right: auto;
+width: 70%;                            /*The width of the text*/
+color:#32552b;                       /*Color of text*/
+line-height: 1.5 ;                     /*Double spaced text*/
+}
+
+img {                                   /*Changing the attributes of images*/
+display: block;
+margin:auto;
+border: 4px solid white;
+}
+
+button {                                /*Customizing the buttons*/
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+background-color: #00ff88;
+border: white;
+color: #32552b;
+padding: 7.5px 7.5px;
+text-align: center;
+text-decoration: none;
+font-size: 16px;
+border-radius: 12px;
+transition-duration: 0.4s;
+box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.178), 0 17px 50px 0 rgba(255, 255, 255, 0.205);
+}
+
+button:hover {                        /*Add effect when cursor hovers button*/
+background-color: white;
+border-radius:12px;
+color: #00ff88;
+}
+
+a{                                  /*Changes attributes of links*/
+text-decoration:#ffffff;
+}
+
+h2{                                 /*Changes attributes to header 2*/
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+color:rgb(96, 149, 86);
+text-decoration: underline;
+}
+
+.shape {                           /*Creates first rounded square shape*/
+height: 1100px;
+width: 600px;
+background-color: #b8ffbc;
+border-radius: 80px;
+margin-bottom: center;
+margin-right: center;
+border: 4px solid white;
+}
+
+.shape2 {                        /*Creates second rounded square shape*/
+border-radius: 30px;
+}
+
+**{END}**
+
+**{BEGINING - JAVASCRIPT CODE CONDITIONALS}**
+
+//This is required to get input from the user in the console.
+// const readline = require('readline-sync');
+
+/*
+Name:        New File Generator (script.js)
+Purpose:     Generates a new file for use in the ICS3U course
+
+Author:
+Created:     28-Sep-2022
+Updated:     28-Sep-2022
+*/
+
+require('./index.js');
+
+let password = 'arnav'
+let guess = prompt('Enter the password: ')
+let grade = ''
+let change_password = prompt("Do you want to change the password? ")
+
+if (change_password == "yes"){
+password = prompt("Enter a new password: ")
+guess = prompt("Enter the password again: ")
+}else{
+guess = prompt("Enter the password:")
+}
+
+if (guess==password){
+
+grade = prompt("Enter the grade: ")
+
+if (grade<50){
+
+console.log("Not passing")
+}  else if (grade>=51&&grade<=69){
+console.log("Needs improvement")
+}  else if (grade>=70&&grade<=79){
+console.log("Meets expectations")
+}  else if (grade>=80){
+console.log("Exceeding expectations")
+}  else{
+console.log("Invalid grade, please enter a valid number")
+grade = prompt("")
+}
+}
+
+//Code goes here
+
+**{END}**
+
+**{BEGINNING - Java script Basics}**
+
+// const password = "qwert12345"
+// passord = password +"6"
+// console.log(password)
+// const password = "qwert12345"
+
+// name of variable  =  information
+var name = prompt("What is your name?")     //Words/Text -> String Data
+var age = prompt("What is your age?")        //numerical Data
+var had_lunch = prompt("Have you had lunch yet?")     //Boolean Data (T/F)
+
+console.log("Hello "+name)
+console.log(name+"'s age is "+age)
+console.log("Did "+name+" have lunch?")
+
+if (had_lunch == "yes" || "Yes" || "yeah" || "Yeah" || "ya" || "ye" || "Ya" || "Ye"){
+console.log("Yes");
+} else {
+console.log("No");
+}
+
+let num  = 10  //Sets num to 10
+let num2 = 7   //Sets num to 7
+
+console.log("The number "+num+" multiplied by the number "+num2+" equals "+num*num2)  //Logs num multiplied by num2
+console.log("The number "+num+" increased by the number "+num2+" equals "+num+num2)  //Logs num addd with num2
+console.log("The number "+num+" decreased by the number "+num2+" equals "+num-num2)  //Logs num subtracted from num2
+console.log("The number "+num+" divided by the number "+num2+" equals "+num/num2)  //Logs num divided by num2
+console.log("The number "+num+" to the power of "+num2+" equals "+num**num2) //Logs num to the power of num2
+
+**{END}**
+
+**{BEGINNING - Temporary Input Method}**
+
+let num = prompt("Enter a value for num")        //Sets variable num to 10
+let num2 = prompt("Enter a value for num2")        //Sets variable num to 15
+let num_addition = num + num2
+
+console.log(num*num2)  //Logs num multiplied by 2
+console.log(num+num2)  //Logs num added by 2
+console.log(num-num2)  //Logs num decreased by 3
+console.log(num/num2)  //Logs num divided by 4
+
+**{END}**
+
+**{BEGINNING - Conditionals}**
+
+let password = 'arnav'
+let guess = prompt('Enter the password: ')
+let grade = ''
+let change_password = prompt("Do you want to change the password? ")
+
+if (change_password == "yes"){
+password = prompt("Enter a new password: ")
+guess = prompt("Enter the password again: ")
+}else{
+guess = prompt("Enter the password:")
+}
+
+if (guess==password){
+
+grade = prompt("Enter the grade: ")
+
+if (grade<50){
+
+console.log("Not passing")
+}  else if (grade>=51&&grade<=69){
+console.log("Needs improvement")
+}  else if (grade>=70&&grade<=79){
+console.log("Meets expectations")
+}  else if (grade>=80){
+console.log("Exceeding expectations")
+}  else{
+console.log("Invalid grade, please enter a valid number")
+grade = prompt("")
+}
+}
+
+**{END}**
+
+**{BEGINNING - Conditionals}**
+
+// let counter = 30
+// let money = 0.25
+// let multiplier = 2
+// let day = 1
+
+// console.log(day+money)
+
+// // while (counter>0){
+// //   money = money*multiplier
+// //   console.log(money)
+// //   counter = counter - 1
+// // }
+
+// for(counter = 30;counter=counter-1;counter==0){
+//   money = money*multiplier
+//   day = day + 1
+//   console.log(day+". "+money)
+// }
+
+// let number = prompt("Enter a number: ")
+// let factorial = number-1
+
+// if (number<1){
+//   console.log("Error")
+// }else{
+//   while (factorial>1){
+//     number=number*factorial
+//     factorial = factorial - 1
+//     console.log(number)
+//   }
+// }
+
+let one = parseInt(prompt("Enter number 1"),10);
+let two = parseInt(prompt("Enter number 2"),10);
+let sum = 0;
+
+if (two>one){
+console.log("error");
+} else {
+for (x=two;x<=one;x+=1){
+sum+=x;
+console.log(sum)
+}
+}
+
+**{END}**
+
+**{BEGINNING - 7 Math functions}**
+
+require('./lesson.js');
+
+let num1 = Math.floor(Math.random() * 9) + 0;
+let num2 = Math.floor(Math.random() * 9) + 0;
+let answer = parseInt(prompt("What is "+num1+" x "+num2))
+if (answer == num1*num2){
+console.log("Thats right!")
+}else{
+console.log("Wrong, try again.")
+}
+
+let dice1 = Math.floor(Math.random() * 6) + 1;
+let dice2 = Math.floor(Math.random() * 6) + 1;
+let dice3 = Math.floor(Math.random() * 6) + 1;
+let counter = 1
+
+console.log(dice1+" "+dice2+" "+dice3)
+
+do{
+dice1 = Math.floor(Math.random() * 6) + 1;
+dice2 = Math.floor(Math.random() * 6) + 1;
+dice3 = Math.floor(Math.random() * 6) + 1;
+console.log(dice1,dice2,dice3)
+counter = counter+1
+
+}while (dice1 != dice2 || dice2 != dice3 || dice1 != dice3){
+console.log("it took "+ counter + " times.")
+}
+
+**{END}**
+
+**{BEGINNING - 7b Math functions}**
+
+require('./index.js');
+
+//Code goes here
+
+// console.log(Math.random())
+
+console.log(Math.floor(Math.random() * 9999) + 1000)
+
+n = parseInt(prompt("Enter a number: "))
+
+for (x=n;x>0;x=-1){
+parseInt(prompt("Enter a number: "))
+}
+
+**{END}**
